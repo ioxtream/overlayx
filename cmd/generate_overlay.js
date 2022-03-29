@@ -88,6 +88,27 @@ async function WriteAlertComponentFile(author, componentName, componentDescripti
     })
 }
 
+async function WriteOverlaysDataFile(author, componentName, componentDescription) {
+    let dataFile = "./data/overlays.json"
+    await fs.readFile(dataFile, (err, data) => {
+        let overlays = JSON.parse(data)
+        let component = {
+           author: author,
+           componentName: componentName,
+           componentDescription: componentDescription,
+        }
+        overlays.push(component)
+        fs.writeFile(dataFile, JSON.stringify(overlays), (err) => {
+            if (err != null) {
+                console.error(err)
+            }
+        })
+    })
+}
+async function WriteOverlaysModuleFile() {
+
+}
+
 (async function () {
     const response = await prompts(questions);
 
@@ -96,4 +117,6 @@ async function WriteAlertComponentFile(author, componentName, componentDescripti
     componentName = componentName.charAt(0).toUpperCase() + componentName.slice(1)
 
     await WriteAlertComponentFile(response.username, componentName, response.componentDescription)
+    await WriteOverlaysDataFile(response.username, componentName, response.componentDescription)
+    await WriteOverlaysModuleFile()
 })()
