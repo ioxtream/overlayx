@@ -1,0 +1,30 @@
+{
+  "name": "obs-overlay",
+  "version": "1.0.0",
+  "description": "IOXtream OBS Overlay for Live Streaming",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel app.html",
+    "generate-alert": "node cmd/generate_overlay.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioxtream-com/obs-overlay.git"
+  },
+  "author": "k4fer74",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ioxtream-com/obs-overlay/issues"
+  },
+  "homepage": "https://github.com/ioxtream-com/obs-overlay#readme",
+  "devDependencies": {
+    "parcel": "^2.4.0",
+    "prompts": "^2.4.2"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.43",
+    "@types/react-dom": "^17.0.14",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
