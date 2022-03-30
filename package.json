@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel app.html",
-    "generate-alert": "node cmd/generate_overlay.js"
+    "generate-overlay": "node cmd/generate_overlay.js"
   },
   "repository": {
     "type": "git",

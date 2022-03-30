@@ -1,34 +1,96 @@
-import { Component } from "react";
-import { Universe } from "./src/Components/Overlay/1648565029009_universe_of_k4fer74";
+import React, { Component } from "react";
+import SampleDonate from "./src/Donations";
+import {
+    Overlays,
+    OverlaysDetails
+} from "./src/Overlays";
+import "./app.css"
+
+const SIMULATION_DELAY_SEC = 5
+
+const createOverlayComponent = (overlay, donate) => {
+    if (typeof Overlays[overlay.componentName] !== "undefined") {
+        return React.createElement(Overlays[overlay.componentName], {
+            key: overlay.componentPath,
+            streamerDonate: donate,
+        })
+    }
+    return React.createElement(
+        () => <div>The Overlay {overlay.componentName} has not been created yet.</div>,
+        { key: overlay.componentPath }
+    )
+}
 
 export class App extends Component {
-    state = {
-        startedSimulation: false,
-        streamerDonate: {},
-    }
     constructor(props) {
-        super(props);
+        super(props)
+        this.state = {
+            startedSimulation: false,
+            remainingSimulationCount: SIMULATION_DELAY_SEC,
+            selectedOverlay: "",
+            streamerDonate: {},
+        }
+
+        this.simulateInAction = this.simulateInAction.bind(this)
+        this.changeOverlay = this.changeOverlay.bind(this)
     }
+
+    changeOverlay(event) {
+        this.setState({
+            selectedOverlay: event.target.value
+        })
+    }
+
     simulateInAction() {
-        if (this.state.startedSimulation === true) {
+        let delay = this.state.remainingSimulationCount
+
+        this.setState({
+            startedSimulation: true,
+            streamerDonate: SampleDonate(),
+        })
+
+        let countDown = setInterval(() => {
+            delay--
+            this.setState({
+                remainingSimulationCount: delay,
+            })
+        }, 1000)
+
+        setTimeout(() => {
             this.setState({
                 startedSimulation: false,
                 streamerDonate: {},
+                remainingSimulationCount: SIMULATION_DELAY_SEC,
             })
-        } else {
-            this.setState({
-                startedSimulation: true,
-                streamerDonate: {
-                    giver_username: "Elon74",
-                    giver_message: "Thanks for sharing with us your knowledge!",
-                    currency: "SAT",
-                    amount: "10000",
-                    animatedGIF: "https://i.pinimg.com/originals/d6/6b/9c/d66b9cd46e19093e06e3edabdf21e1da.gif",
-                }
-            })
-        }
+            clearInterval(countDown)
+        }, SIMULATION_DELAY_SEC * 1000)
     }
+
     render() {
-        return <div>{this.state.startedSimulation ? <Universe streamerDonate={this.state.streamerDonate} /> : null }  <button onClick={this.simulateInAction.bind(this)}>In Action!</button></div>;
+        return (
+            <div>
+                <header>
+                    <select value={this.state.selectedOverlay} onChange={this.changeOverlay}>
+                        <option value="">Select one AlertBox</option>
+                        { OverlaysDetails.map((overlay) =>
+                            <option key={ overlay.componentPath } value={ overlay.componentName }>
+                                { overlay.componentName } of { overlay.author }
+                            </option>
+                        )}
+                    </select>
+                    <button disabled={ this.state.startedSimulation || this.state.selectedOverlay === "" } onClick={ this.simulateInAction }>
+                        See in action!
+                        <span style={{ display: this.state.startedSimulation ? "inline" : "none" }}>
+                            ({ this.state.remainingSimulationCount }s)
+                        </span>
+                    </button>
+                </header>
+                { OverlaysDetails.map((overlay) =>
+                    <div key={ overlay.componentPath } style={{ display: overlay.componentName === this.state.selectedOverlay && this.state.startedSimulation ? "block": "none" }}>
+                        { createOverlayComponent(overlay, this.state.streamerDonate) }
+                    </div>
+                )}
+            </div>
+        )
     }
 }

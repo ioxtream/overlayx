@@ -6,4 +6,4 @@ Run the command below and answer the prompted questions:
 $ npm run generate-overlay
 ```
 
-A new file will be created at `src/Components/Overlay`
+New files will be created at `src/Components/Overlay`
