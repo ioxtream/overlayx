@@ -3,8 +3,8 @@ const glob = require('glob')
 
 module.exports = {
     entry: {
-        ...glob.sync("./src/Components/Overlay/*.jsx").reduce((acc, curr) => {
-            return {...acc, ["/alertbox/" + path.basename(curr, ".jsx")]: curr}
+        ...glob.sync("./src/Components/Overlay/*.js").reduce((acc, curr) => {
+            return {...acc, ["/alertbox/" + path.basename(curr, ".js")]: curr}
         }, {})
     },
     output: {
@@ -17,7 +17,7 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.jsx?$/,
+            test: /\.js?$/,
             exclude: /node_modules/,
             use: {
                 loader: "babel-loader",
@@ -31,6 +31,6 @@ module.exports = {
         }]
     },
     resolve: {
-        extensions: [".js", ".jsx"]
+        extensions: [".js"]
     }
 }

@@ -127,7 +127,7 @@ async function WriteOverlaysDataFile(componentInfo) {
 
 async function WriteOverlaysModuleFile(overlaysJSON) {
     let importHeaderLine = (componentName, filePath) => {
-       return `import { ${componentName} } from "${filePath.replace("src/", "")}"\n`
+       return `import ${componentName} from "${filePath.replace("src/", "")}"\n`
     }
     let moduleExports = (componentName) => {
         return `${componentName}: ${componentName},\n`

@@ -18,9 +18,9 @@ import * as Styles from "./1648651912218_universe_of_k4fer74.module.css"
 export default function Universe(props) {
     return (
         <div className={Styles.box}>
-            <img alt="" src={this.props.streamerDonate.animatedGIF} height={100} />
-            <h2><span className={Styles.highlight}>{this.props.streamerDonate.giver_username}</span> sent {this.props.streamerDonate.amount} {this.props.streamerDonate.currency}</h2>
-            <h3>{this.props.streamerDonate.giver_message}</h3>
+            <img alt="" src={props.streamerDonate.animatedGIF} height={100} />
+            <h2><span className={Styles.highlight}>{props.streamerDonate.giver_username}</span> sent {props.streamerDonate.amount} {props.streamerDonate.currency}</h2>
+            <h3>{props.streamerDonate.giver_message}</h3>
         </div>
     )
 }
