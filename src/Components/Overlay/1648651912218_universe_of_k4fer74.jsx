@@ -1,5 +1,7 @@
 import React from "react";
 
-export const App = () => {
-    return <div>hello world</div>;
+const RemoteComponent = () => {
+    return <div>Hello Remote World!</div>;
 };
+
+export default RemoteComponent;
