@@ -3,7 +3,7 @@ module.exports = {
         [
             "@babel/preset-env",
             {
-                modules: false
+                modules: "commonjs"
             }
         ],
         "@babel/preset-react"
@@ -23,8 +23,6 @@ module.exports = {
                         removeImport: true
                     }
                 ],
-                "@babel/plugin-transform-react-inline-elements",
-                "@babel/plugin-transform-react-constant-elements"
             ]
         }
     }
