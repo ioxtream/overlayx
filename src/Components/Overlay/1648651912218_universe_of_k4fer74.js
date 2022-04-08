@@ -13,7 +13,7 @@
 */
 
 import React from "react"
-import * as Styles from "./1648651912218_universe_of_k4fer74.module.css"
+import Styles from "./1648651912218_universe_of_k4fer74.module.css"
 
 export default function Universe(props) {
     return (
