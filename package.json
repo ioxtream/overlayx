@@ -1,11 +1,11 @@
 {
   "name": "obs-overlay",
   "version": "1.0.0",
-  "description": "IOXtream OBS Overlay for Live Streaming",
+  "description": "IOXtream OBS Studio React components for overlays",
   "main": "index.js",
   "scripts": {
     "start": "parcel app.html",
-    "generate-overlay": "node cmd/generate_overlay.js"
+    "generate-alertbox": "node cmd/generate_alertbox.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,27 @@
   },
   "homepage": "https://github.com/ioxtream-com/obs-overlay#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-react-constant-elements": "^7.17.6",
+    "@babel/plugin-transform-react-inline-elements": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime": "^7.17.9",
+    "@babel/runtime-corejs3": "^7.17.9",
+    "babel-loader": "^8.2.4",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "core-js": "^3.21.1",
+    "css-loader": "^6.7.1",
+    "glob": "^7.2.0",
     "parcel": "^2.4.0",
-    "prompts": "^2.4.2"
+    "prompts": "^2.4.2",
+    "regenerator-runtime": "^0.13.9",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   },
   "dependencies": {
     "@types/react": "^17.0.43",

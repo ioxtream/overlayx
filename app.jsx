@@ -1,23 +1,20 @@
 import React, { Component } from "react";
+import { AlertBoxes, AlertBoxesDetails } from "./src/AlertBoxes";
 import SampleDonate from "./src/Donations";
-import {
-    Overlays,
-    OverlaysDetails
-} from "./src/Overlays";
 import "./app.css"
 
-const SIMULATION_DELAY_SEC = 5
+const SIMULATION_DELAY_SEC = 10
 
-const createOverlayComponent = (overlay, donate) => {
-    if (typeof Overlays[overlay.componentName] !== "undefined") {
-        return React.createElement(Overlays[overlay.componentName], {
-            key: overlay.componentPath,
-            streamerDonate: donate,
+const createAlertBoxComponent = (alertBox, donate) => {
+    if (typeof AlertBoxes[alertBox.componentName] !== "undefined") {
+        return React.createElement(AlertBoxes[alertBox.componentName], {
+            key: alertBox.componentPath,
+            donate: donate,
         })
     }
     return React.createElement(
-        () => <div>The Overlay {overlay.componentName} has not been created yet.</div>,
-        { key: overlay.componentPath }
+        () => <div>The AlertBox {alertBox.componentName} has not been created yet.</div>,
+        { key: alertBox.componentPath }
     )
 }
 
@@ -28,14 +25,14 @@ export class App extends Component {
             startedSimulation: false,
             remainingSimulationCount: SIMULATION_DELAY_SEC,
             selectedOverlay: "",
-            streamerDonate: {},
+            donate: {},
         }
 
         this.simulateInAction = this.simulateInAction.bind(this)
-        this.changeOverlay = this.changeOverlay.bind(this)
+        this.changeAlertBox = this.changeAlertBox.bind(this)
     }
 
-    changeOverlay(event) {
+    changeAlertBox(event) {
         this.setState({
             selectedOverlay: event.target.value
         })
@@ -46,7 +43,7 @@ export class App extends Component {
 
         this.setState({
             startedSimulation: true,
-            streamerDonate: SampleDonate(),
+            donate: SampleDonate(),
         })
 
         let countDown = setInterval(() => {
@@ -59,7 +56,7 @@ export class App extends Component {
         setTimeout(() => {
             this.setState({
                 startedSimulation: false,
-                streamerDonate: {},
+                donate: {},
                 remainingSimulationCount: SIMULATION_DELAY_SEC,
             })
             clearInterval(countDown)
@@ -70,11 +67,11 @@ export class App extends Component {
         return (
             <div>
                 <header>
-                    <select value={this.state.selectedOverlay} onChange={this.changeOverlay}>
+                    <select value={this.state.selectedOverlay} onChange={this.changeAlertBox}>
                         <option value="">Select one AlertBox</option>
-                        { OverlaysDetails.map((overlay) =>
-                            <option key={ overlay.componentPath } value={ overlay.componentName }>
-                                { overlay.componentName } of { overlay.author }
+                        { AlertBoxesDetails.map((alertBox) =>
+                            <option key={ alertBox.componentPath } value={ alertBox.componentName }>
+                                { alertBox.componentName } of { alertBox.author }
                             </option>
                         )}
                     </select>
@@ -85,9 +82,9 @@ export class App extends Component {
                         </span>
                     </button>
                 </header>
-                { OverlaysDetails.map((overlay) =>
-                    <div key={ overlay.componentPath } style={{ display: overlay.componentName === this.state.selectedOverlay && this.state.startedSimulation ? "block": "none" }}>
-                        { createOverlayComponent(overlay, this.state.streamerDonate) }
+                { AlertBoxesDetails.map((alertBox) =>
+                    <div key={ alertBox.componentPath } style={{ display: alertBox.componentName === this.state.selectedOverlay && this.state.startedSimulation ? "block": "none" }}>
+                        { createAlertBoxComponent(alertBox, this.state.donate) }
                     </div>
                 )}
             </div>

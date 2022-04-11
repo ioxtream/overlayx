@@ -30,11 +30,11 @@ header select {
 header button {
     padding: 5px 10px;
     font-weight: bold;
-    background-color: cornflowerblue;
+    background-color: #6ed035;
     color: #fff;
     margin-left: 4px;
 }
 
 header button:disabled {
-    opacity: .75;
+    opacity: .4;
 }
