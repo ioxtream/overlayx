@@ -16,7 +16,7 @@ const questions = [{
     }, {
         type: 'text',
         name: 'componentName',
-        message: 'Overlay component Name (e.g Universe)',
+        message: 'AlertBox component Name (e.g Universe)',
         validate: (componentName) => {
             let componentNameRegex = /^[a-zA-Z]+$/
             if (componentNameRegex.test(componentName) === false) {
@@ -28,7 +28,7 @@ const questions = [{
     }, {
         type: 'text',
         name: 'componentDescription',
-        message: 'Overlay component Description',
+        message: 'AlertBox component Description',
         validate: (componentDescription) => {
             let componentDescriptionRegex = /^[a-zA-Z\s]*$/
             if (componentDescriptionRegex.test(componentDescription) === false) {
@@ -47,7 +47,7 @@ function OverlayComponentContent(author, componentName, componentDescription, fi
       - Do not change or modify this comment block.
       - Do not change name of exported component class (${componentName}).
      
-    File: ${fileName}.jsx
+    File: ${fileName}.js
     Name: ${componentName}
     Description: ${componentDescription}
     Author: https://github.com/${author}
@@ -55,38 +55,33 @@ function OverlayComponentContent(author, componentName, componentDescription, fi
     ${componentName} renders a React IOXtream Overlay Component.
 */
 
-import { Component } from "react"
-import * as Styles from "./${fileName}.module.css"
+import React from "react"
+import Styles from "./${fileName}.module.css"
 
-export class ${componentName} extends Component {
-    constructor(props) {
-        super(props)
-    }
-    render() {
-        return (
-            <div>
-                <h2>{this.props.streamerDonate.giver_username}</h2>
-                <h3>{this.props.streamerDonate.giver_message}</h3>
-            </div>
-        )
-    }
+export default function ${componentName}(props) {
+    return (
+        <div>
+            <h2>{props.donate.username}</h2>
+            <h3>{props.donate.message}</h3>
+        </div>
+    )
 }
 `
 }
 
-async function WriteOverlayComponentFiles(author, componentName, componentDescription) {
+async function WriteAlertBoxComponentFiles(author, componentName, componentDescription) {
     let timeStamp = new Date().getTime()
     let fileName = `${timeStamp}_${componentName.toLowerCase()}_of_${author}`
-    let filePath = "./src/Components/Overlay/" + fileName
+    let filePath = "./src/Components/AlertBox/" + fileName
 
     let fileComponentContent = OverlayComponentContent(author, componentName, componentDescription, fileName)
 
-    await fs.writeFile(filePath + ".jsx", fileComponentContent, err => {
+    await fs.writeFile(filePath + ".js", fileComponentContent, err => {
         if (err) {
             console.error(err)
             return {}
         } else {
-            console.log(`Generated file: ${filePath}.jsx`)
+            console.log(`Generated file: ${filePath}.js`)
         }
     })
 
@@ -104,13 +99,13 @@ async function WriteOverlayComponentFiles(author, componentName, componentDescri
         author: author,
         name: componentName,
         description: componentDescription,
-        filePath: filePath + ".jsx",
+        filePath: filePath + ".js",
         at: timeStamp,
     }
 }
 
-async function WriteOverlaysDataFile(componentInfo) {
-    let dataFilePath = "./data/overlays.json"
+async function WriteAlertBoxesDataFile(componentInfo) {
+    let dataFilePath = "./data/alert_boxes.json"
 
     let dataJSON = fs.readFileSync(dataFilePath, {encoding: "utf8"})
     let fileJSON = JSON.parse(dataJSON)
@@ -125,7 +120,7 @@ async function WriteOverlaysDataFile(componentInfo) {
     return fileJSON
 }
 
-async function WriteOverlaysModuleFile(overlaysJSON) {
+async function WriteAlertBoxesModuleFile(alertBoxesJSON) {
     let importHeaderLine = (componentName, filePath) => {
        return `import ${componentName} from "${filePath.replace("src/", "")}"\n`
     }
@@ -135,20 +130,20 @@ async function WriteOverlaysModuleFile(overlaysJSON) {
     let importHeader = ""
     let objectExport = ""
     let componentsDetail = []
-    for (let i = 0; i < overlaysJSON.length; i++) {
-        let data = overlaysJSON[i]
+    for (let i = 0; i < alertBoxesJSON.length; i++) {
+        let data = alertBoxesJSON[i]
         importHeader += importHeaderLine(data.componentName, data.componentPath)
         objectExport += moduleExports(data.componentName)
         componentsDetail.push(data)
     }
 
-    let overlaysFileContent = `
+    let fileContent = `
 // Note: This file was generated automatically. Do not change or modify its content.
 ${importHeader}
-export const OverlaysDetails = ${JSON.stringify(componentsDetail)}
-export const Overlays = {\n${objectExport}}
+export const AlertBoxesDetails = ${JSON.stringify(componentsDetail)}
+export const AlertBoxes = {\n${objectExport}}
     `
-    fs.writeFileSync("./src/Overlays.js", overlaysFileContent)
+    fs.writeFileSync("./src/AlertBoxes.js", fileContent)
 }
 
 (async function () {
@@ -158,7 +153,7 @@ export const Overlays = {\n${objectExport}}
     let componentName = response.componentName
     componentName = componentName.charAt(0).toUpperCase() + componentName.slice(1)
 
-    let componentInfo = await WriteOverlayComponentFiles(response.username, componentName, response.componentDescription)
-    let overlaysJSON = await WriteOverlaysDataFile(componentInfo)
-    await WriteOverlaysModuleFile(overlaysJSON)
+    let componentInfo = await WriteAlertBoxComponentFiles(response.username, componentName, response.componentDescription)
+    let alertBoxesJSON = await WriteAlertBoxesDataFile(componentInfo)
+    await WriteAlertBoxesModuleFile(alertBoxesJSON)
 })()

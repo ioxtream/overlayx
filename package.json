@@ -1,11 +1,11 @@
 {
   "name": "obs-overlay",
   "version": "1.0.0",
-  "description": "IOXtream OBS Overlay for Live Streaming",
+  "description": "IOXtream OBS Studio React components for overlays",
   "main": "index.js",
   "scripts": {
     "start": "parcel app.html",
-    "generate-overlay": "node cmd/generate_overlay.js"
+    "generate-alertbox": "node cmd/generate_alertbox.js"
   },
   "repository": {
     "type": "git",

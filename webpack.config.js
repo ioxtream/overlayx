@@ -3,7 +3,7 @@ const glob = require('glob')
 
 module.exports = {
     entry: {
-        ...glob.sync("./src/Components/Overlay/*.js").reduce((acc, curr) => {
+        ...glob.sync("./src/Components/AlertBox/*.js").reduce((acc, curr) => {
             return {...acc, ["/alertbox/" + path.basename(curr, ".js")]: curr}
         }, {})
     },
