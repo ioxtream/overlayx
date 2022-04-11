@@ -3,9 +3,9 @@
     <strong>OBSx extends OBS Studio overlays with React components.</strong>
 </p>
 
-[![Discord](https://img.shields.io/badge/IOXtream-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/R2x3AbPg)
+[![Discord](https://img.shields.io/badge/IOXtream-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ioxtream)
 [![Twitter](https://img.shields.io/badge/IOXtream-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/ioxtream)
-[![Brave](https://img.shields.io/badge/IOXtream.io-FB542B?style=for-the-badge&logo=Brave&logoColor=white)](https://ioxtream.com)
+[![Brave](https://img.shields.io/badge/IOXtream.io-FB542B?style=for-the-badge&logo=Brave&logoColor=white)](https://ioxtream.io)
 
 > We are working on expanding components. [Want to contribute?](#contributing)
 
