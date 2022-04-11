@@ -2,10 +2,11 @@
   "name": "obs-overlay",
   "version": "1.0.0",
   "description": "IOXtream OBS Studio React components for overlays",
-  "main": "index.js",
   "scripts": {
     "start": "parcel app.html",
-    "generate-alertbox": "node cmd/generate_alertbox.js"
+    "generate-alertbox": "node cmd/generate_alertbox.js",
+    "build": "parcel build index.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "repository": {
     "type": "git",
