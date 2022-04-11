@@ -24,8 +24,8 @@ import Styles from "./1648651912218_universe_of_k4fer74.module.css"
 export default function Universe(props) {
     return (
         <div>
-            <h2>{props.donate.giver_username}</h2>
-            <h3>{props.donate.giver_message}</h3>
+            <h2>{props.donate.username}</h2>
+            <h3>{props.donate.message}</h3>
         </div>
     )
 }
