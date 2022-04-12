@@ -1,6 +1,6 @@
-<h1 align="center">OBSx</h1>
+<h1 align="center">OverlayX</h1>
 <p align="center">
-    <strong>OBSx extends OBS Studio overlays with React components.</strong>
+    <strong>OverlayX extends OBS Studio overlays with React components.</strong>
 </p>
 
 [![Discord](https://img.shields.io/badge/IOXtream-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ioxtream)
