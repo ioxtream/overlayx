@@ -1,4 +1,9 @@
-<h1 align="center">OverlayX</h1>
+<div align="center">
+    <img src="logo.png" height="150">
+</div>
+<h1 align="center">
+    OverlayX
+</h1>
 <p align="center">
     <strong>OverlayX extends OBS Studio overlays with React components.</strong>
 </p>
