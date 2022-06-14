@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "IOXtream OBS Studio React components for overlays",
   "scripts": {
-    "start": "parcel app.html",
+    "start": "parcel index.html",
     "generate-alertbox": "node cmd/generate_alertbox.js",
     "build": "parcel build index.html --public-url ./",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
