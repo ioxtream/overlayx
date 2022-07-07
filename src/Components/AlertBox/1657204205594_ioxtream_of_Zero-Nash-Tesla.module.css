@@ -1,9 +1,12 @@
+.container {
+    width: 100%;
+}
+
 .box {
     text-align: center;
-    position: relative;
     color: #fff;
     padding: 40px;
-    max-width: 50%;
+    width: 70%;
     margin: 30px auto 0;
     border-radius: 100px;
     box-shadow:
@@ -16,16 +19,16 @@
     -10px 0 80px #fff,
     10px 0 80px #fff;
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
 }
 
 .box img {
     border-radius: 100%;
-    position: absolute;
     height: 100px;
-    top: 50%;
-    margin-top: -50px;
-    left: 0;
-    margin-left: 20px;
 }
 
 .highlight {
@@ -36,24 +39,18 @@
     margin-bottom: 10px;
 }
 
-.logo {
-    position: absolute;
+.io {
+    border-radius: 100%;
+    background-color: #fff;
+    width: 100px;
     height: 100px;
-    margin-top: 55px;
-    left: 0;
-    margin-left: 63%;
-    width: 200px;
-    z-index: 1;
 }
 
-.io {
+.logo {
     position: absolute;
-    height: 100px;
-    margin-top: -120px;
-    margin-left: 72%;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
+    width: 30%;
+    bottom: -40px;
+    right: 20px;
     z-index: 1;
-    background-color: white;
+    max-width: 260px;
 }
