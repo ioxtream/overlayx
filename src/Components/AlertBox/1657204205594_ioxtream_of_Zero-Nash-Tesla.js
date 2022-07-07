@@ -19,7 +19,7 @@ export default function IOXtream(props) {
     return (
         <React.Fragment>
             <div className={Styles.logo}>
-            <img alt="" src="https://mvp.ioxtream.com/images/logo/ioxtream-beta.svg"/>
+            <img alt="" src="https://ioxtream.io/images/logo/ioxtream-beta.svg"/>
         </div>
         <div className={Styles.box}>
             <img alt="" src={props.donate.animated_gif} height={100} />
