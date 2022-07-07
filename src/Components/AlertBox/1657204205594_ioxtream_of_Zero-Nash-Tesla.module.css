@@ -10,14 +10,14 @@
     margin: 30px auto 0;
     border-radius: 100px;
     box-shadow:
-    inset 0 0 50px #fff,
-    inset 20px 0 80px #000000,
-    inset -20px 0 80px #000000,
-    inset 20px 0 300px #000000,
-    inset -20px 0 300px #000000,
-    0 0 50px #fff, /* Brilho externo*/
-    -10px 0 80px #fff,
-    10px 0 80px #fff;
+      inset 0 0 50px #fff,
+      inset 20px 0 80px #000000,
+      inset -20px 0 80px #000000,
+      inset 20px 0 300px #000000,
+      inset -20px 0 300px #000000,
+      0 0 50px #fff, /* Brilho externo*/
+      -10px 0 80px #fff,
+      10px 0 80px #fff;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@
     flex-direction: row;
 }
 
-.box img {
+.img {
     border-radius: 100%;
     height: 100px;
 }
@@ -43,13 +43,14 @@
     border-radius: 100%;
     background-color: #fff;
     width: 100px;
+    min-width: 100px;
     height: 100px;
 }
 
 .logo {
     position: absolute;
     width: 30%;
-    bottom: -40px;
+    bottom: -50px;
     right: 20px;
     z-index: 1;
     max-width: 260px;

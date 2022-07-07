@@ -19,17 +19,17 @@ export default function IOXtream(props) {
     return (
         <div className={Styles.container}>
           <div className={Styles.box}>
-              <img alt="" src={props.donate.animated_gif} height={100} />
+              <img alt="" className={Styles.img} src={props.donate.animated_gif} height={100} />
               <div>
                 <h2><span className={Styles.highlight}>{props.donate.username}</span> sent {props.donate.amount} {props.donate.currency}</h2>
                 <h3>{props.donate.message}</h3>
               </div>
               <div className={Styles.io}>
-                  <img alt="" src="https://user-images.githubusercontent.com/98370909/171199876-b93f7ea9-f7fd-4320-9a44-091c78009c90.gif" width="100%"/>
+                  <img alt="" className={Styles.img} src="https://user-images.githubusercontent.com/98370909/171199876-b93f7ea9-f7fd-4320-9a44-091c78009c90.gif" width="100%"/>
               </div>
-          </div>
-          <div className={Styles.logo}>
-            <img alt="" src="https://ioxtream.io/images/logo/ioxtream-beta.svg"/>
+              <div className={Styles.logo}>
+                <img alt="" src="https://ioxtream.io/images/logo/ioxtream-beta.svg"/>
+              </div>
           </div>
         </div>
     )
