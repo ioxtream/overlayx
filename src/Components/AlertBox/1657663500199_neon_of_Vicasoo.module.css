@@ -18,6 +18,7 @@
                 0 0 .8rem #bc13fe,
                 0 0 .8rem #bc13fe,
                 inset 0 0 .3rem #bc13fe; 
+    max-width: 100%;
 }
 
 .donate_data{
