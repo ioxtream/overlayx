@@ -22,7 +22,7 @@ export default function IOXtreamBeta(props) {
             <div className={Styles.donate_data}>
                 <div className={Styles.GIF_container} style={{backgroundImage: `url(${props.donate.animated_gif})`}}></div>
                 <div className={Styles.informations}>
-                    <h2 className={Styles.giver}>
+                    <h2>
                         {props.donate.username}
                     </h2>
                     <span>
@@ -30,7 +30,7 @@ export default function IOXtreamBeta(props) {
                     </span>
                 </div>
             </div>
-            <h3 className={Styles.message}>{props.donate.message}</h3>
+            <h3>{props.donate.message}</h3>
             <div className={Styles.logo}>
                 <img alt="" src="https://ioxtream.io/images/logo/ioxtream-beta.svg"/>
             </div>

@@ -23,18 +23,20 @@ export default function Neon(props) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href={"https://fonts.googleapis.com/css2?family=Poppins&display=swap"} rel="stylesheet" />
         <div className={Styles.container}>
-            <div className={Styles.donate_data}>
-                <div className={Styles.GIF} style={{backgroundImage: `url(${props.donate.animated_gif})`}}></div>
+            <div className={Styles.profile}>
+                <img alt="" className={Styles.GIF} src={props.donate.animated_gif} />
                 <div className={Styles.informations}>
-                    <h2 className={Styles.highlight}>
-                        {props.donate.username}
+                    <h2>
+                        <span className={Styles.highlight}>
+                            {props.donate.username}
+                        </span> 
                     </h2>
                     <span>
-                        sent you <b>{props.donate.amount} {props.donate.currency}</b>
+                        enviou <b>{props.donate.amount} {props.donate.currency}</b>
                     </span>
                 </div>
             </div>
-            <h3 className={Styles.message}>
+            <h3>
                 {props.donate.message}
             </h3>
             <div className={Styles.logo}>
