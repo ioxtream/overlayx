@@ -1,26 +1,8 @@
 const SampleDonations = [{
-    username: "Elon74",
-    message: "Thanks for sharing with us your knowledge!",
+    username: "Kverk0 Kverk0 Kverk0 aaaa",
+    message: "Thanks for sharing with us your knowledge!Thanks for sharing with us your knowledge!Thanks for sharing with us your knowledge! aaaaaaaaaaaaaaaaa",
     currency: "CHZ",
     amount: "4",
-    animated_gif: "https://i.pinimg.com/originals/d6/6b/9c/d66b9cd46e19093e06e3edabdf21e1da.gif",
-}, {
-    username: "MrBeast",
-    message: "I really love your videos! Never stop with this!",
-    currency: "ADA",
-    amount: "10",
-    animated_gif: "https://i.pinimg.com/originals/d6/6b/9c/d66b9cd46e19093e06e3edabdf21e1da.gif",
-}, {
-    username: "BitcoinMAXI",
-    message: "Let's talk about Bitcoin!",
-    currency: "ETH",
-    amount: "0.4",
-    animated_gif: "https://i.pinimg.com/originals/d6/6b/9c/d66b9cd46e19093e06e3edabdf21e1da.gif",
-}, {
-    username: "freeGuY",
-    message: "Hey, what's up?",
-    currency: "BNB",
-    amount: "0.1",
     animated_gif: "https://i.pinimg.com/originals/d6/6b/9c/d66b9cd46e19093e06e3edabdf21e1da.gif",
 }]
 
