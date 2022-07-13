@@ -43,8 +43,8 @@
     padding: 5vw;
     font-weight: 200;
 }
-h2 {
-    width: 100%;
+
+.giver {
     text-align: left;
     box-sizing: border-box;
     font-size: 4vw;
@@ -52,7 +52,7 @@ h2 {
     color: #050608;
 }
 
-h3 {
+.message {
     display: block;
     word-wrap: break-word;
     font-size: 2.5vw;
