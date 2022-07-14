@@ -45,6 +45,7 @@
     background: linear-gradient(90deg, rgba(255,0,232,1) 0%, rgba(127,0,162,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00e8",endColorstr="#7f00a2",GradientType=1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
     font-size: 4vw;
