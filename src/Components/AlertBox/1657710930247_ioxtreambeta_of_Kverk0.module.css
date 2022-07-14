@@ -1,16 +1,15 @@
 .container {
     font-family: 'Poppins', sans-serif;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 80px;
+    width: 90vw;
+    margin: 0 5vw;
+    margin-top: 8vw;
     color: #fff;
-    max-width: 500px;
     position: relative;
+    max-width: 100%;
 }
 
 .donate_data{
-    padding: 15px;
+    padding: 2vw;
     border-radius: 10px;
     background: rgb(255,0,104);
     background: -moz-linear-gradient(90deg, rgba(255,0,104,1) 0%, rgba(180,20,239,1) 100%);
@@ -24,13 +23,13 @@
 }
 
 .GIF_container{
-    width: 80px;
-    height: 80px;
+    width: 20vw;
+    height: 20vw;
     background-color: #fff;
     background-position: center;
     background-size: cover;
     border-radius: 10px;
-    margin-top: -2.5vw;
+    margin-top: -4vw;
 }
 
 .informations{
@@ -38,58 +37,58 @@
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     word-wrap: break-word;
-    line-height: 2.2vw;
-    margin-left: 20px;
+    line-height: 3.5vw;
+    box-sizing: border-box;
+    padding: 5vw;
     font-weight: 200;
 }
-h2 {
-    width: 100%;
+
+.giver {
     text-align: left;
     box-sizing: border-box;
-    font-size: 2.5vw;
+    font-size: 4vw;
     font-weight: bold;
     color: #050608;
 }
 
-h3 {
+.message {
     display: block;
-    width: 100%;
-    margin-top: 20px;
     word-wrap: break-word;
-    font-size: 1.3vw;
+    font-size: 2.5vw;
+    width: 80vw;
+    margin: 0 5vw;
+    margin-top: 3vw;
 }
 
 .IO{
     position: absolute;
-    height: 80px;
-    width: 80px;
+    height: 9vw;
+    width: 9vw;
     right: 30%;
-    top: -60px;
+    top: -7vw;
     animation: IO 3s linear;
     opacity: 0;
 }
 
 .logo {
     position: absolute;
-    width: 20%;
-    top: -30px;
+    width: 20vw;
+    top: -4vw;
     right: 0;
     z-index: 1;
-    padding: 4px 10px;
     border-radius: 7px;
-    max-width: 260px;
 }
 
 @keyframes IO {
     0%, 100%{
         opacity: 0;
-        top: -60px
+        top: -7vw
     }
 
     50% {
         opacity: 1;
-        top: -80px
+        top: -9vw
     }
 }
