@@ -3,7 +3,7 @@ import { AlertBoxes, AlertBoxesDetails } from "./src/AlertBoxes";
 import SampleDonate from "./src/Donations";
 import "./app.css"
 
-const SIMULATION_DELAY_SEC = 1000
+const SIMULATION_DELAY_SEC = 10
 
 const createAlertBoxComponent = (alertBox, donate) => {
     if (typeof AlertBoxes[alertBox.componentName] !== "undefined") {
