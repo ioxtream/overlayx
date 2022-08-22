@@ -1,0 +1,166 @@
+.iox_container{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 80px;
+    max-width: 768px;
+    min-width: 460px;
+    position: relative;
+}
+
+.iox_container_title_bg{
+    background: rgb(121,87,242);
+    background: -moz-linear-gradient(90deg, rgba(121,87,242,1) 0%, rgba(180,20,239,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(121,87,242,1) 0%, rgba(180,20,239,1) 100%);
+    background: linear-gradient(90deg, rgba(121,87,242,1) 0%, rgba(180,20,239,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7957f2",endColorstr="#b414ef",GradientType=1);
+    position: absolute;
+    left: 0;
+    top: -6px;
+    width: 25%;
+    margin-left: calc(5% + 30px);
+    height: 34px;
+}
+
+.iox_container_title_bg::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -36px;
+    border-right: 36px solid transparent;
+    border-bottom: 36px solid #b414ef;
+    width: 0;
+}
+
+.iox_container_title_bg::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -36px;
+    border-left: 36px solid transparent;
+    border-bottom: 36px solid #7957f2;
+    width: 0;
+}
+
+.iox_container_title_black{
+    position: absolute;
+    left: 0;
+    top: -3px;
+    background-color: #730cc4;
+    width: 25%;
+    margin-left: calc(5% + 30px);
+    height: 33px;
+}
+
+.iox_container_title_black::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -33px;
+    border-right: 33px solid transparent;
+    border-bottom: 33px solid #730cc4;
+    width: 0;
+}
+
+.iox_container_title_black::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -33px;
+    border-left: 33px solid transparent;
+    border-bottom: 33px solid #730cc4;
+    width: 0;
+}
+
+.iox_container_title{
+    background: rgb(121,87,242);
+    background: -moz-linear-gradient(90deg, rgba(121,87,242,1) 0%, rgba(180,20,239,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(121,87,242,1) 0%, rgba(180,20,239,1) 100%);
+    background: linear-gradient(90deg, rgba(121,87,242,1) 0%, rgba(180,20,239,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7957f2",endColorstr="#b414ef",GradientType=1);
+    width: 30%;
+    margin-left: calc(5% + 30px);
+    position: relative;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iox_container_title::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #b414ef;
+    width: 0;
+}
+
+.iox_container_title::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    border-left: 30px solid transparent;
+    border-bottom: 30px solid #7957f2;
+    width: 0;
+}
+
+.iox_container_title p{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weigth: 800;
+    text-align: center;
+}
+.iox_container_data{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weigth: 700;
+    border-radius: 10px;
+    background: rgb(255,0,104);
+    background: -moz-linear-gradient(90deg, rgba(255,0,104,1) 0%, rgba(180,20,239,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255,0,104,1) 0%, rgba(180,20,239,1) 100%);
+    background: linear-gradient(90deg, rgba(255,0,104,1) 0%, rgba(180,20,239,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0068",endColorstr="#b414ef",GradientType=1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.iox_container h2{
+    color: #ffffff;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    font-size: 30px
+}
+.iox_container h3{
+    color: #ffe027;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    font-size: 40px
+}
+.iox_io{
+    width: 10%;
+    position: absolute;
+    right: 7%;
+    top: 0;
+}
+.iox_star{
+    width: 10%;
+    position: absolute;
+    right: -5%;
+    bottom: 7%;
+}
+.iox_hype{
+    width: 20%;
+    position: absolute;
+    left: -7%;
+    bottom: -15%;
+}
