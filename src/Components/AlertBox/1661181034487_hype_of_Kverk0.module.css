@@ -1,11 +1,10 @@
 .iox_container{
-    width: 50%;
     margin-left: 25%;
     margin-right: 25%;
     margin-top: 80px;
     max-width: 768px;
-    min-width: 460px;
     position: relative;
+    animation: Container 10s linear;
 }
 
 .iox_container_title_bg{
@@ -117,6 +116,7 @@
 }
 .iox_container_data{
     width: 100%;
+    height: 150px;
     font-family: 'Poppins', sans-serif;
     font-weigth: 700;
     border-radius: 10px;
@@ -130,6 +130,7 @@
     align-items: center;
     flex-direction: column;
     padding: 30px 0;
+    overflow: hidden;
 }
 
 .iox_container h2{
@@ -137,30 +138,114 @@
     width: fit-content;
     margin: 0;
     padding: 0;
-    font-size: 30px
+    font-size: 30px;
+    animation: Content 10s linear;
 }
 .iox_container h3{
     color: #ffe027;
     width: fit-content;
     margin: 0;
     padding: 0;
-    font-size: 40px
+    font-size: 40px;
+    animation: Content 10s linear;
 }
 .iox_io{
     width: 10%;
     position: absolute;
     right: 7%;
     top: 0;
+    animation: IO 5s linear infinite;
 }
 .iox_star{
     width: 10%;
     position: absolute;
     right: -5%;
     bottom: 7%;
+    animation: Star 5s linear infinite;
 }
 .iox_hype{
     width: 20%;
     position: absolute;
     left: -7%;
     bottom: -15%;
+    animation: Sticker 2s linear infinite;
+}
+
+
+@keyframes IO {
+    0%, 100%{
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(3px, 0px);
+    }
+
+    40% {
+        transform: translate(2px, 3px);
+    }
+
+    60% {
+        transform: translate(-2px, 5px);
+    }
+
+    80% {
+        transform: translate(3px, -5px);
+    }
+}
+
+@keyframes Star {
+    0%, 100%{
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(0px, 3px);
+    }
+
+    40% {
+        transform: translate(3px, 2px);
+    }
+
+    60% {
+        transform: translate(-5px, -2px);
+    }
+
+    80% {
+        transform: translate(-5px, 3px);
+    }
+}
+
+@keyframes Sticker {
+    0%, 100%{
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes Container {
+    0%, 100%{
+        width: 0;
+        opacity: 0;
+    }
+    3% {
+        width: 50%;
+        opacity: 1;
+    }
+    97% {
+        width: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes Content {
+    0%, 100%{
+        opacity: 0
+    }
+    10%, 90% {
+        opacity: 1;
+    }
 }
