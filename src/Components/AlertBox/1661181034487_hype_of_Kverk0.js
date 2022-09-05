@@ -33,14 +33,16 @@ export default function Hype(props) {
                         </i>
                     </p>
                 </div>
-                <div className={Styles.iox_container_data}>
-                    <h2>{props.donate.username}</h2>
-                    <h3>{props.donate.amount} {props.donate.currency}</h3>
+                <div className={Styles.iox_container_data_wrapper}>
+                    <div className={Styles.iox_container_data}>
+                        <h2>{props.donate.username}</h2>
+                        <h3>{props.donate.amount} {props.donate.currency}</h3>
+                    </div>
+                    <img alt="" className={Styles.iox_io} src="https://ioxtream.io/images/overlayx/io.png"/>
+                    <img alt="" className={Styles.iox_star} src="https://ioxtream.io/images/overlayx/star.png"/>
+                    <img alt="" className={Styles.iox_hype} src="https://ioxtream.io/images/overlayx/we_dont_need_hype.png"/>
                 </div>
                 <h4 className={Styles.iox_message}>{props.donate.message}</h4>
-                <img alt="" className={Styles.iox_io} src="https://ioxtream.io/images/overlayx/io.png"/>
-                <img alt="" className={Styles.iox_star} src="https://ioxtream.io/images/overlayx/star.png"/>
-                <img alt="" className={Styles.iox_hype} src="https://ioxtream.io/images/overlayx/we_dont_need_hype.png"/>
             </div>
         </>
     )
