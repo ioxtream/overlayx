@@ -3,12 +3,12 @@
     Notes
       - Do not change or modify this comment block.
       - Do not change name of exported component class (Hype).
-     
+
     File: 1661181034487_hype_of_Kverk0.js
     Name: Hype
     Description: Animated alert from IOXtream
     Author: https://github.com/Kverk0
-     
+
     Hype renders a React IOXtream Overlay Component.
 */
 
@@ -37,6 +37,7 @@ export default function Hype(props) {
                     <h2>{props.donate.username}</h2>
                     <h3>{props.donate.amount} {props.donate.currency}</h3>
                 </div>
+                <h4 className={Styles.iox_message}>{props.donate.message}</h4>
                 <img alt="" className={Styles.iox_io} src="https://ioxtream.io/images/overlayx/io.png"/>
                 <img alt="" className={Styles.iox_star} src="https://ioxtream.io/images/overlayx/star.png"/>
                 <img alt="" className={Styles.iox_hype} src="https://ioxtream.io/images/overlayx/we_dont_need_hype.png"/>
