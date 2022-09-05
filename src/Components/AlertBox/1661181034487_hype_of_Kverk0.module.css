@@ -134,6 +134,10 @@
     overflow: hidden;
 }
 
+.iox_container_data_wrapper{
+    position: relative;
+}
+
 .iox_container h2{
     color: #ffffff;
     width: fit-content;
@@ -154,7 +158,7 @@
     width: 10%;
     position: absolute;
     right: 7%;
-    top: 0;
+    top: -30px;
     animation: IO 5s linear infinite;
 }
 .iox_star{
@@ -168,18 +172,17 @@
     width: 20%;
     position: absolute;
     left: -7%;
-    bottom: -15%;
+    bottom: -10%;
     animation: Sticker 2s linear infinite;
 }
 .iox_message{
     width: 90%;
     margin: 0 5%;
+    margin-top: 25px;
     color: #fff;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #585858;
     font-size: 23px;
-    position: absolute;
-    bottom: -160px;
 }
 
 
