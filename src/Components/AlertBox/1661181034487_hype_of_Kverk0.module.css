@@ -4,6 +4,7 @@
     margin-top: 80px;
     max-width: 768px;
     position: relative;
+    font-family: 'Poppins', sans-serif;
     animation: Container 10s linear;
 }
 
@@ -169,6 +170,16 @@
     left: -7%;
     bottom: -15%;
     animation: Sticker 2s linear infinite;
+}
+.iox_message{
+    width: 90%;
+    margin: 0 5%;
+    color: #fff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #585858;
+    font-size: 23px;
+    position: absolute;
+    bottom: -160px;
 }
 
 
