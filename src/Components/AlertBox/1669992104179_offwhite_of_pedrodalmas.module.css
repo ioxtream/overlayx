@@ -1,0 +1,142 @@
+.container{
+    width: 30%;
+    height: auto;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 4vw;
+    position: relative;
+    z-index: 1;
+    animation: Container 10s linear infinite;
+}
+
+.iox_io{
+    width: 4vw;
+    position: absolute;
+    z-index: 0;
+    margin-top: -3vw;
+    margin-left: 13.5vw;
+    animation: IO 6s linear infinite;
+}
+
+.offwhite_container{
+    width: 100%;
+    height: auto;
+    color: #FFFAFA;
+    background: #FFFAFA;
+    border-radius: 1vw;
+    display: flex;
+    position: relative;
+}
+
+.background_text{
+    font-family: 'Syne Mono', monospace;
+    color: #C0C0C0;
+    font-size: 6vw;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 0.25vw;
+    margin-left: 8vw;
+    opacity: 0.75;
+    z-index: 2;
+}
+
+.gif_container{
+    width: 6vw;
+    height: 6vw;
+    margin: 0.4vw 0vw 1vw 0.4vw;
+}
+
+.gif{
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+    border: 0.3vw solid #ff00a0;
+    box-shadow: 0.07vw 0.07vw #000;
+}
+
+.donate_info_container{
+    width: 80%;
+    height: auto;
+    z-index: 3;
+    font-family: 'Poppins', sans-serif;
+    margin: 0.3vw 0.4vw 0.2vw 0.5vw;
+    color: #ff00a0;
+    text-shadow: 0.03vw 0.03vw #000;
+    text-align: center;
+}
+
+.donate_info_nickname{
+    font-size: 1.5vw;
+    margin-top: 1.4vw;
+    font-weight: bold;
+}
+
+.donate_info_amount_currency{
+    margin-top: -0.3vw;
+    font-size: 1.25vw;
+}
+
+.lower_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.iox_ioxtream{
+    width: 6vw;
+    margin-top: 0.3vw;
+    margin-right: 0.3vw;
+    animation: IOXtreamBeta 2s linear infinite;
+}
+
+.donate_message{
+    width: 80%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15vw;
+    font-weight: bold;
+    color: #FFFAFA;
+    text-shadow: 0.03vw 0.03vw #000;
+    -webkit-text-stroke-width: 0.02vw;
+    -webkit-text-stroke-color: #000;
+}
+
+@keyframes IO {
+    0%, 100%{
+        top: 0.5vw;
+    }
+
+    25%, 75% {
+        top: 2.5vw;
+    }
+
+    50% {
+        top: 0vw;
+    }
+}
+
+@keyframes IOXtreamBeta {
+    0%, 100%{
+        transform: scale(.9);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes Container {
+    0%, 100%{
+        transform: scale(0);
+    }
+
+    2%, 98%{
+        transform: scale(1.1);
+    }
+
+    4%, 96%{
+        transform: scale(1);
+    }
+}
