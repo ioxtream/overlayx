@@ -1,0 +1,208 @@
+.container{
+    max-width: 30%;
+    height: auto;
+    margin-left: 35%;
+    margin-right: 35%;
+    font-family: 'VT323', monospace;
+    border: 2px dotted transparent;
+    position: relative;
+    animation: Container 10s linear infinite;
+}
+
+.new_donation_container{
+    width: 25%;
+    margin-left: 0.75%;
+    height: 1vw;
+    background: #A020F0;
+    margin-bottom: 0.95vw;
+    border: 0vw solid #000;
+    box-shadow: 
+                -0.2vw 0 0 0 #000,
+                0.2vw 0 0 0 #000,
+                0 0.2vw 0 0 #000,
+                0 -0.2vw 0 0 #000;
+    text-align: center;
+}
+
+.new_donation_text{
+    display: flex;
+    color: white;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+    font-weight: bold;
+    margin-left: 1.4vw;
+}
+
+.ioxtream_text{
+    position: absolute;
+    width: 20%;
+    margin-left: 23.75vw;
+    animation: IOXtream 2s linear infinite;
+}
+
+.retro_container{
+    margin-top: 0.5vw;
+    width: 100%;
+    height: auto;
+    background: #222;
+    box-shadow: 
+                -0.2vw 0 0 0 #000,
+                0.2vw 0 0 0 #000,
+                0 0.2vw 0 0 #000,
+                0 -0.2vw 0 0 #000,
+                -0.4vw 0 0 0 #A020F0,
+                0.4vw 0 0 0 #A020F0,
+                0 0.4vw 0 0 #A020F0,
+                0 -0.4vw 0 0 #A020F0,
+                -0.6vw 0 0 0 #FF00FF,
+                0.6vw 0 0 0 #FF00FF,
+                0 0.6vw 0 0 #FF00FF,
+                0 -0.6vw 0 0 #FF00FF,
+                -0.8vw 0 0 0 #A020F0,
+                0.8vw 0 0 0 #A020F0,
+                0 0.8vw 0 0 #A020F0,
+                0 -0.8vw 0 0 #A020F0,
+                -1vw 0 0 0 #000,
+                1vw 0 0 0 #000,
+                0 1vw 0 0 #000,
+                0 -1vw 0 0 #000,
+                0.2vw 0.2vw 0 0 #A020F0,
+                -0.2vw 0.2vw 0 0 #A020F0,
+                0.2vw -0.2vw 0 0 #A020F0,
+                -0.2vw -0.2vw 0 0 #A020F0,
+                0.4vw 0.4vw 0 0 #FF00FF,
+                -0.4vw 0.4vw 0 0 #FF00FF,
+                0.4vw -0.4vw 0 0 #FF00FF,
+                -0.4vw -0.4vw 0 0 #FF00FF,
+                0.6vw 0.6vw 0 0 #A020F0,
+                -0.6vw 0.6vw 0 0 #A020F0,
+                0.6vw -0.6vw 0 0 #A020F0,
+                -0.6vw -0.6vw 0 0 #A020F0,
+                0.8vw 0.8vw 0 0 #000,
+                -0.8vw 0.8vw 0 0 #000,
+                0.8vw -0.8vw 0 0 #000,
+                -0.8vw -0.8vw 0 0 #000;
+}
+
+.information_container{
+    width: 100%;
+    height: auto;
+    border: 2px solid transparent;
+    display: flex;
+}
+
+.gif_container{
+    width: 20%;
+    margin-left: 0.3vw;
+    margin-top: 0.3vw;
+    margin-bottom: 0.3vw;
+    box-sizing: border-box;
+}
+
+.gif{
+    width: 100%;
+    height: auto;
+    border: 0.2vw solid #FF00FF;
+    border-radius: 1vw;
+}
+
+.donate_info_container{
+    width: 80%;
+    border: 2px solid transparent;
+    margin-top: 0.3vw;
+    margin-bottom: 0.3vw;
+}
+
+.donate_info{
+    text-align: left;
+    text-shadow: 0.1vw 0.1vw #000;
+    margin-left: 1.5vw;
+}
+
+.donate_info_username{
+    font-size: 2vw;
+    color: #FF1493;
+    margin-top: 0.75vw;
+}
+
+.donate_info_text{
+    font-size: 2vw;
+    color: #fff;
+    margin-top: 0.1vw;
+}
+
+.donate_info_amount_currency{
+    font-size: 2vw;
+    color: #FF1493;
+}
+
+.donate_message_container{
+    width: 100%;
+    position: relative;
+    margin-top: 1.25vw;
+}
+
+.donate_message{
+    text-align: justify;
+    font-size: 1.5vw;
+    color: #fff;
+    text-shadow: 0.1vw 0.1vw #000;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.02vw;
+    -webkit-text-stroke-color: black;
+}
+
+.iox_io{
+    position: absolute;
+    margin-left: 30.6vw;
+    width: 4vw;
+    height: auto;
+    animation: IO 4s linear infinite;
+}
+
+@keyframes Container {
+    0%{
+        margin-top: -2.5vw;
+        opacity: 0;
+    }
+
+    3%{
+        opacity: 1;
+    }
+
+    10%{
+        margin-top: 2.5vw;
+    }
+
+    97%{
+        margin-top: 2.5vw;
+        opacity: 1;
+    }
+
+    100%{
+        margin-top: 2.5vw;
+        opacity: 0;
+    }
+}
+
+@keyframes IO {
+    0%, 100%{
+        opacity: 1;
+        top: 0.5vw;
+    }
+
+    50% {
+        opacity: 1;
+        top: 6.5vw;
+    }
+}
+
+@keyframes IOXtream {
+    0%, 100%{
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
