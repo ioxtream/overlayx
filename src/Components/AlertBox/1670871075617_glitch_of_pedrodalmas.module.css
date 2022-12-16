@@ -1,0 +1,189 @@
+.container{
+    width: 27%;
+    margin-left: 36.5%;
+    margin-right: 36.5%;
+    margin-top: 3vw;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    animation: Container 10s linear infinite;
+}
+
+.ioxtream_beta{
+    width: 25%;
+    margin-left: 70%;
+    margin-bottom: -0.65vw;
+    animation: IOXtreamBeta 2s linear infinite;
+}
+
+.iox_io{
+    width: 10%;
+    position: absolute;
+    margin-top: 3vw;
+    margin-left: 0.75vw;
+    animation: IO 1.5s linear infinite;
+}
+
+.glitch_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.gif_container{
+    width: 20%;
+    height: auto;
+    position: absolute;
+}
+
+.gif{
+    width: 100%;
+    height: auto;
+    border: 0.2vw solid #ff00a0;
+    border-radius: 50%;
+}
+
+.message_container{
+    width: 90%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 0.2vw;
+    text-align: center;
+    color: #fff;
+}
+
+.message{
+    font-size: 0.9vw;
+    font-weight: bold;
+    text-shadow: 0.1vw 0.1vw #000;
+    -webkit-text-stroke-width: 0.03vw;
+    -webkit-text-stroke-color: #000;
+}
+
+.main_container{
+    width: 85%;
+    height: 5vw;
+    margin-top: 0.5vw;
+    margin-left: 3vw;
+    background: #ff00a0;
+    color: #fff;
+    border-radius: 1vw;
+}
+
+.main_container_info{
+    width: 80%;
+    height: auto;
+    margin-left: 3.25vw;
+    margin-top: 0.75vw;
+    font-size: 1.25vw;
+    position: relative;
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #7a04eb,
+    0.025em 0.04em 0 #ff124f;
+    animation: GlitchEffect 725ms infinite;
+    font-weight: bold;
+}
+
+.nick_glitch{
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.donate_glitch{
+    font-weight: bold;
+    position: absolute;
+    top: 1.9vw;
+    left: 4.75vw;
+}
+  
+.glitch span:first-child {
+    animation: GlitchEffect 500ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    transform: translate(-0.04em, -0.03em);
+    opacity: 0.75;
+}
+  
+.glitch span:last-child {
+    animation: GlitchEffect 375ms infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    transform: translate(0.04em, 0.03em);
+    opacity: 0.75;
+}
+
+@keyframes Container {
+    0%{
+        opacity: 0;
+    }
+
+    3%{
+        opacity: 1;
+    }
+
+    95%{
+        opacity: 1;
+        transform: scale(1.0);
+    }
+
+    97.5%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(0);
+    }
+}
+
+@keyframes GlitchEffect {
+    0% {
+      text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #7a04eb,
+        0.025em 0.04em 0 #ff124f;
+    }
+    15% {
+      text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #7a04eb,
+        0.025em 0.04em 0 #ff124f;
+    }
+    16% {
+      text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #7a04eb,
+        -0.05em -0.05em 0 #ff124f;
+    }
+    49% {
+      text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #7a04eb,
+        -0.05em -0.05em 0 #ff124f;
+    }
+    50% {
+      text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #7a04eb,
+        0 -0.04em 0 #ff124f;
+    }
+    99% {
+      text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #7a04eb,
+        0 -0.04em 0 #ff124f;
+    }
+    100% {
+      text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #7a04eb,
+        -0.04em -0.025em 0 #ff124f;
+    }
+}
+
+@keyframes IOXtreamBeta {
+    0%, 100%{
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes IO {
+    0%, 100%{
+        opacity: 1;
+        top: -0.5vw;
+    }
+
+    50% {
+        opacity: 1;
+        top: 0.5vw;
+    }
+}
