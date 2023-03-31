@@ -21,7 +21,7 @@ export default function Universe(props) {
         <div className={Styles.box}>
             <img alt="" className={Styles.img} src={props.donate.animated_gif} height={100} />
             <div>
-              <h2><span className={Styles.highlight}>{props.donate.username}</span> sent {props.donate.amount} {props.donate.currency}</h2>
+              <h2><span className={Styles.highlight}>{props.donate.username}</span> sent {props.donate.amount}</h2>
               <h3>{props.donate.message}</h3>
             </div>
             <div className={Styles.io}>

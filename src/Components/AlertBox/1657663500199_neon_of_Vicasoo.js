@@ -32,7 +32,7 @@ export default function Neon(props) {
                         </span> 
                     </h2>
                     <span>
-                        enviou <b>{props.donate.amount} {props.donate.currency}</b>
+                        enviou <b>{props.donate.amount}</b>
                     </span>
                 </div>
             </div>
