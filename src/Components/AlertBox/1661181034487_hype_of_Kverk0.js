@@ -36,7 +36,7 @@ export default function Hype(props) {
                 <div className={Styles.iox_container_data_wrapper}>
                     <div className={Styles.iox_container_data}>
                         <h2>{props.donate.username}</h2>
-                        <h3>{props.donate.amount} {props.donate.currency}</h3>
+                        <h3>{props.donate.amount}</h3>
                     </div>
                     <img alt="" className={Styles.iox_io} src="https://ioxtream.io/images/overlayx/io.png"/>
                     <img alt="" className={Styles.iox_star} src="https://ioxtream.io/images/overlayx/star.png"/>

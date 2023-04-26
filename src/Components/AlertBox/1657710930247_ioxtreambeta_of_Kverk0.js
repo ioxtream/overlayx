@@ -26,7 +26,7 @@ export default function IOXtreamBeta(props) {
                         {props.donate.username}
                     </h2>
                     <span>
-                        sent you <b>{props.donate.amount} {props.donate.currency}</b>
+                        sent you <b>{props.donate.amount}</b>
                     </span>
                 </div>
             </div>
