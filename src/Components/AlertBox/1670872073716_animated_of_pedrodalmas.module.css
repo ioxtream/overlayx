@@ -1,0 +1,272 @@
+.container {
+    width: 30%;
+    height: auto;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 3vw;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    border: 2px solid transparent;
+    animation: Container 10s linear infinite;
+  }
+  
+  .new_donation_container {
+    position: absolute;
+    border: 2px solid transparent;
+    width: 100%;
+    height: auto;
+    font-family: 'Rubik Mono One', sans-serif;
+    word-spacing: -1.5vw;
+    font-size: 2.75vw;
+    font-weight: bold;
+    margin-top: -0.5vw;
+  }
+  
+  .new_donation_first {
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: #000;
+    animation: NewDonateFirst 10s linear infinite;
+  }
+  
+  .new_donation_second {
+    margin-top: -1vw;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: #000;
+    animation: NewDonateSecond 10s linear infinite;
+  }
+  
+  .new_donation_third{
+    margin-top: -0.9vw;
+    text-align: center;
+    color: #ffffff;
+    text-shadow:    0.15vw 0.15vw #ff00a0,
+                      -0.15vw -0.15vw #ff00a0,
+                      0.15vw -0.15vw #ff00a0,
+                      -0.15vw 0.15vw #ff00a0;
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: #000;
+    animation: NewDonateThird 10s linear infinite;
+  }
+  
+  .main_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  
+  .gif_container {
+    width: 20%;
+    height: auto;
+    margin: 0.4vw 0vw 0vw 0.4vw;
+  }
+  
+  .gif {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border: 0.25vw solid #000;
+    border-radius: 4vw;
+    box-shadow: 0.2vw 0.2vw #ff00a0, -0.2vw -0.2vw #ff00a0, -0.2vw 0.2vw #ff00a0,
+      0.2vw -0.2vw #ff00a0;
+    animation: CustomGif 10s linear infinite;
+    z-index: 2;
+  }
+  
+  .donate_info_container {
+    height: 5vw;
+    margin-top: 1vw;
+    margin-left: 2.5vw;
+    position: absolute;
+    border: 0.25vw solid #000;
+    background: #ffffff;
+    border-radius: 2vw;
+    box-shadow: 0.2vw 0.2vw #ff00a0, -0.2vw -0.2vw #ff00a0, -0.2vw 0.2vw #ff00a0,
+      0.2vw -0.2vw #ff00a0;
+    z-index: 1;
+    animation: DonateInfo 10s linear infinite;
+  }
+  
+  .donate_info {
+    text-align: center;
+    font-size: 1.25vw;
+    margin-left: 2.5vw;
+    margin-top: 0.75vw;
+    text-shadow: 0.05vw 0.05vw #000;
+  }
+  
+  .highlight_text {
+    font-weight: bold;
+    color: #ff00a0;
+  }
+  
+  .lower_container {
+    height: auto;
+    display: flex;
+    animation: LowerContainer 10s linear infinite;
+  }
+  
+  .donate_message {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 2.5%;
+    text-align: justify;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: #fffafa;
+    text-shadow: 0.03vw 0.03vw #000;
+    -webkit-text-stroke-width: 0.02vw;
+    -webkit-text-stroke-color: #000;
+  }
+  
+  .iox_ioxtream {
+    width: 7.5vw;
+    margin-top: -0.25vw;
+    animation: IOXtreamBeta 2s linear infinite;
+  }
+  
+  .iox_io {
+    position: absolute;
+    width: 4vw;
+    height: auto;
+    margin-left: 1.75vw;
+    margin-top: -2.5vw;
+    animation: IO 10s linear infinite;
+  }
+  
+  @keyframes NewDonateFirst {
+    0%, 4.9% {
+      opacity: 1;
+    }
+  
+    5%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes NewDonateSecond {
+    0%, 1.4% {
+      opacity: 0;
+    }
+  
+    1.5%, 5.9% {
+      opacity: 1;
+    }
+  
+    6%, 100%{
+      opacity: 0;
+    }
+  }
+  
+  @keyframes NewDonateThird {
+    0%, 2.9% {
+      opacity: 0;
+    }
+  
+    3%, 6.9% {
+      opacity: 1;
+    }
+  
+    7%, 100%{
+      opacity: 0;
+    }
+  }
+  
+  @keyframes CustomGif {
+    0%, 6.9% {
+      opacity: 0;
+      margin-left: 10vw;
+    }
+  
+    7% {
+      opacity: 1;
+      margin-left: 10vw;
+      transform: scale(0);
+    }
+  
+    8.5% {
+      opacity: 1;
+      margin-left: 10vw;
+      transform: scale(1.1);
+    }
+  
+    10% {
+      opacity: 1;
+      margin-left: 10vw;
+      transform: scale(1);
+    }
+  
+    12.5%, 100% {
+      opacity: 1;
+      margin-left: 0vw;
+    }
+  }
+  
+  @keyframes DonateInfo {
+    0%, 12.5% {
+      opacity: 0;
+      width: 0%;
+    }
+  
+    15%, 100% {
+      opacity: 1;
+      width: 90%;
+    }
+  }
+  
+  @keyframes Container {
+    95% {
+      transform: scale(1);
+    }
+  
+    97.5% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(0);
+    }
+  }
+  
+  @keyframes IOXtreamBeta {
+    0%, 100% {
+      transform: scale(0.9);
+    }
+  
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes LowerContainer {
+    0%, 15% {
+      width: 0%;
+      opacity: 0;
+    }
+  
+    17.5%, 100% {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes IO {
+      0%, 12.5% {
+        opacity: 0;
+      }
+    
+      15%{
+        opacity: 1;
+      }
+    
+      20%, 50%, 80%{
+        margin-top: 0vw;
+      }
+    
+      30%, 40%, 60%, 70%, 90%, 100%{
+        margin-top: -2.5vw;
+      }
+    }
